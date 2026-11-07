@@ -1,0 +1,318 @@
+export type Locale = "de" | "en";
+
+export const locales: Locale[] = ["de", "en"];
+export const defaultLocale: Locale = "de";
+
+export const ui = {
+  de: {
+    nav: {
+      vault: "VAULT",
+      games: "SPIELE",
+      progress: "FORTSCHRITT",
+      secrets: "GEHEIMNISSE",
+    },
+    hero: {
+      title: "GAME VAULT",
+      subtitle: "Sieben Spiele. Ein Tresor. Unendlich viele Geheimnisse.",
+      cta: "TRESOR ÖFFNEN",
+      ctaAria: "Zum Spiele-Bereich scrollen",
+    },
+    games: {
+      title: "DIE SPIELE",
+      subtitle: "Jedes Spiel birgt ein Fragment. Sammle alle sieben.",
+      locked: "VERSIEGELT",
+      unlocked: "ENTSIEGELT",
+      completed: "VOLLENDET",
+      secret: "FRAGMENT GEFUNDEN",
+      play: "SPIELEN",
+      continue: "FORTSETZEN",
+      replay: "WIEDERHOLEN",
+    },
+    gameDescriptions: {
+      chronicle: "Ordne historische Ereignisse der Zeitlinie zu. Präzision entscheidet.",
+      cipher: "Entschlüssle Frequenz-Muster. Jede Stufe ein neuer Schlüssel.",
+      constellation: "Verbinde Sternbilder aus Fragmenten. Gedächtnis trifft Geometrie.",
+      archive: "Rekonstruiere verlorene Dokumente. Logik. Ordnung. Wahrheit.",
+      resonance: "Erkenne Audio-Muster. Dein Gehör ist der Schlüssel.",
+      palimpsest: "Kratze Schichten frei. Was darunter liegt, verändert alles.",
+      vault: "Das Meta-Rätsel. Sechs Fragmente. Ein Meisterschlüssel.",
+    },
+    progress: {
+      title: "DEIN FORTSCHRITT",
+      subtitle: "Lokal gespeichert. Keine Server. Nur du.",
+      totalProgress: "Gesamtfortschritt",
+      gamesCompleted: "Spiele vollendet",
+      secretsFound: "Geheimnisse entdeckt",
+      timePlayed: "Gesamtzeit",
+      reset: "ZURÜCKSETZEN",
+      resetConfirm: "Wirklich alles löschen? Dieser Vorgang ist nicht rückgängig zu machen.",
+      export: "EXPORTIEREN",
+      import: "IMPORTIEREN",
+    },
+    secrets: {
+      title: "ENTDECKTE GEHEIMNISSE",
+      subtitle: "Was du gefunden hast, gehört dir.",
+      none: "Noch keine Geheimnisse entdeckt.",
+      found: "Gefunden",
+      location: "Ort",
+      hint: "HINWEIS",
+    },
+    footer: {
+      domain: "myraya.de",
+      built: "Mit Brutalist Luxe gebaut",
+      noTracking: "Kein Tracking. Keine Cookies. Nur Code.",
+    },
+    common: {
+      loading: "LADET...",
+      error: "FEHLER",
+      close: "SCHLIESSEN",
+      back: "ZURÜCK",
+      next: "WEITER",
+      previous: "ZURÜCK",
+      submit: "BESTÄTIGEN",
+      cancel: "ABBRECHEN",
+      save: "SPEICHERN",
+      language: "SPRACHE",
+      theme: "THEMA",
+      sound: "TON",
+      music: "MUSIK",
+      effects: "EFFEKTE",
+      fullscreen: "VOLLBILDSCHIRM",
+      pause: "PAUSE",
+      resume: "FORTSETZEN",
+      restart: "NEU STARTEN",
+      quit: "BEENDEN",
+      yes: "JA",
+      no: "NEIN",
+      confirm: "BESTÄTIGEN",
+    },
+    easterEggs: {
+      konami: "KONAMI-CODE AKTIVIERT",
+      devtools: "DEVTOOLS ERKANNT",
+      clickPattern: "MUSTER ERKANNT",
+      timeBased: "ZEITLICHES EASTER EGG",
+      secretRoute: "VERSTECKTE ROUTE GEFUNDEN",
+    },
+    gamesUI: {
+      chronicle: {
+        title: "CHRONICLE",
+        instruction: "Ziehe Ereignisse in die korrekte chronologische Reihenfolge.",
+        submit: "PRÜFEN",
+        correct: "RICHTIG",
+        incorrect: "FALSCH",
+        tryAgain: "ERNEUT VERSUCHEN",
+        level: "STUFE",
+        score: "PUNKTE",
+      },
+      cipher: {
+        title: "CIPHER",
+        instruction: "Entschlüssele den Text durch Frequenzanalyse.",
+        hint: "HINWEIS",
+        submit: "ENTSCHLÜSSELN",
+        frequency: "HÄUFIGKEIT",
+        mapping: "ZUORDNUNG",
+      },
+      constellation: {
+        title: "CONSTELLATION",
+        instruction: "Verbinde die Sterne zum gesuchten Sternbild.",
+        stars: "STERNE",
+        connections: "VERBINDUNGEN",
+        reveal: "ENTHÜLLEN",
+      },
+      archive: {
+        title: "ARCHIVE",
+        instruction: "Rekonstruiere das Dokument aus Fragmenten.",
+        fragments: "FRAGMENTE",
+        slots: "PLÄTZE",
+        verify: "PRÜFEN",
+      },
+      resonance: {
+        title: "RESONANCE",
+        instruction: "Merke dir die Tonfolge und wiederhole sie.",
+        listen: "HÖREN",
+        repeat: "WIEDERHOLEN",
+        sequence: "FOLGE",
+        round: "RUNDE",
+      },
+      palimpsest: {
+        title: "PALIMPSEST",
+        instruction: "Kratze die Oberflächenschicht frei.",
+        scratch: "FREIKRATZEN",
+        reveal: "ENTHÜLLEN",
+        layer: "SCHICHT",
+      },
+      vault: {
+        title: "VAULT",
+        instruction: "Setze alle sechs Fragmente zusammen.",
+        fragments: "FRAGMENTE",
+        combine: "KOMBINIEREN",
+        masterKey: "MEISTERSCHLÜSSEL",
+      },
+    },
+  },
+  en: {
+    nav: {
+      vault: "VAULT",
+      games: "GAMES",
+      progress: "PROGRESS",
+      secrets: "SECRETS",
+    },
+    hero: {
+      title: "GAME VAULT",
+      subtitle: "Seven Games. One Vault. Infinite Secrets.",
+      cta: "OPEN VAULT",
+      ctaAria: "Scroll to games section",
+    },
+    games: {
+      title: "THE GAMES",
+      subtitle: "Each game holds a fragment. Collect all seven.",
+      locked: "SEALED",
+      unlocked: "UNSEALED",
+      completed: "COMPLETED",
+      secret: "FRAGMENT FOUND",
+      play: "PLAY",
+      continue: "CONTINUE",
+      replay: "REPLAY",
+    },
+    gameDescriptions: {
+      chronicle: "Place historical events on the timeline. Precision decides.",
+      cipher: "Decrypt frequency patterns. Each level a new key.",
+      constellation: "Connect constellations from fragments. Memory meets geometry.",
+      archive: "Reconstruct lost documents. Logic. Order. Truth.",
+      resonance: "Recognize audio patterns. Your hearing is the key.",
+      palimpsest: "Scratch away layers. What lies beneath changes everything.",
+      vault: "The meta-puzzle. Six fragments. One master key.",
+    },
+    progress: {
+      title: "YOUR PROGRESS",
+      subtitle: "Stored locally. No servers. Just you.",
+      totalProgress: "Total Progress",
+      gamesCompleted: "Games Completed",
+      secretsFound: "Secrets Found",
+      timePlayed: "Total Time",
+      reset: "RESET",
+      resetConfirm: "Really delete everything? This cannot be undone.",
+      export: "EXPORT",
+      import: "IMPORT",
+    },
+    secrets: {
+      title: "DISCOVERED SECRETS",
+      subtitle: "What you found belongs to you.",
+      none: "No secrets discovered yet.",
+      found: "Found",
+      location: "Location",
+      hint: "HINT",
+    },
+    footer: {
+      domain: "myraya.de",
+      built: "Built with Brutalist Luxe",
+      noTracking: "No tracking. No cookies. Just code.",
+    },
+    common: {
+      loading: "LOADING...",
+      error: "ERROR",
+      close: "CLOSE",
+      back: "BACK",
+      next: "NEXT",
+      previous: "PREVIOUS",
+      submit: "SUBMIT",
+      cancel: "CANCEL",
+      save: "SAVE",
+      language: "LANGUAGE",
+      theme: "THEME",
+      sound: "SOUND",
+      music: "MUSIC",
+      effects: "EFFECTS",
+      fullscreen: "FULLSCREEN",
+      pause: "PAUSE",
+      resume: "RESUME",
+      restart: "RESTART",
+      quit: "QUIT",
+      yes: "YES",
+      no: "NO",
+      confirm: "CONFIRM",
+    },
+    easterEggs: {
+      konami: "KONAMI CODE ACTIVATED",
+      devtools: "DEVTOOLS DETECTED",
+      clickPattern: "PATTERN DETECTED",
+      timeBased: "TIME-BASED EASTER EGG",
+      secretRoute: "HIDDEN ROUTE FOUND",
+    },
+    gamesUI: {
+      chronicle: {
+        title: "CHRONICLE",
+        instruction: "Drag events into correct chronological order.",
+        submit: "CHECK",
+        correct: "CORRECT",
+        incorrect: "INCORRECT",
+        tryAgain: "TRY AGAIN",
+        level: "LEVEL",
+        score: "SCORE",
+      },
+      cipher: {
+        title: "CIPHER",
+        instruction: "Decrypt the text through frequency analysis.",
+        hint: "HINT",
+        submit: "DECRYPT",
+        frequency: "FREQUENCY",
+        mapping: "MAPPING",
+      },
+      constellation: {
+        title: "CONSTELLATION",
+        instruction: "Connect stars to form the target constellation.",
+        stars: "STARS",
+        connections: "CONNECTIONS",
+        reveal: "REVEAL",
+      },
+      archive: {
+        title: "ARCHIVE",
+        instruction: "Reconstruct the document from fragments.",
+        fragments: "FRAGMENTS",
+        slots: "SLOTS",
+        verify: "VERIFY",
+      },
+      resonance: {
+        title: "RESONANCE",
+        instruction: "Memorize the tone sequence and repeat it.",
+        listen: "LISTEN",
+        repeat: "REPEAT",
+        sequence: "SEQUENCE",
+        round: "ROUND",
+      },
+      palimpsest: {
+        title: "PALIMPSEST",
+        instruction: "Scratch away the surface layer.",
+        scratch: "SCRATCH",
+        reveal: "REVEAL",
+        layer: "LAYER",
+      },
+      vault: {
+        title: "VAULT",
+        instruction: "Assemble all six fragments into the master key.",
+        fragments: "FRAGMENTS",
+        combine: "COMBINE",
+        masterKey: "MASTER KEY",
+      },
+    },
+  },
+} as const;
+
+export type TranslationKeys = typeof ui.de;
+
+export function getTranslation(locale: Locale): TranslationKeys {
+  return ui[locale];
+}
+
+export function t(locale: Locale, key: string): string {
+  const keys = key.split(".");
+  let value: unknown = ui[locale];
+  for (const k of keys) {
+    if (value && typeof value === "object" && k in value) {
+      value = (value as Record<string, unknown>)[k];
+    } else {
+      return key;
+    }
+  }
+  return typeof value === "string" ? value : key;
+}

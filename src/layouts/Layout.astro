@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+import { cn } from '../lib/utils';
+
+interface Props {
+  title?: string;
+  description?: string;
+  locale?: 'de' | 'en';
+}
+
+const { title = 'GAME VAULT', description = 'Sieben Spiele. Ein Tresor. Unendlich viele Geheimnisse.', locale = 'de' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#080808" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <title>{title} | myraya.de</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://myraya.de" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body class="bg-bg-primary text-fg-primary antialiased">
+    <slot />
+    <script is:inline>
+      // Global Easter Egg handlers
+      (function() {
+        // Time-based easter eggs
+        const checkTimeEggs = () => {
+          const now = new Date();
+          const hour = now.getHours();
+          const minute = now.getMinutes();
+          const day = now.getDate();
+          const month = now.getMonth() + 1;
+
+          // Midnight
+          if (hour === 0 && minute === 0) {
+            if (!localStorage.getItem('easter_midnight')) {
+              localStorage.setItem('easter_midnight', 'true');
+              console.log('%c🕛 MIDNIGHT EASTER EGG ACTIVATED', 'color: #d49630; font-size: 16px; font-weight: bold;');
+            }
+          }
+
+          // 3:33 AM
+          if (hour === 3 && minute === 33) {
+            if (!localStorage.getItem('easter_333')) {
+              localStorage.setItem('easter_333', 'true');
+              console.log('%c👁 3:33 AM - THE WITCHING HOUR', 'color: #d49630; font-size: 16px; font-weight: bold;');
+            }
+          }
+
+          // Full moon approximation (14th of month)
+          if (day === 14 && hour === 22) {
+            if (!localStorage.getItem('easter_fullmoon')) {
+              localStorage.setItem('easter_fullmoon', 'true');
+              console.log('%c🌕 FULL MOON EASTER EGG', 'color: #d49630; font-size: 16px; font-weight: bold;');
+            }
+          }
+
+          // April 1st
+          if (month === 4 && day === 1) {
+            if (!localStorage.getItem('easter_april1')) {
+              localStorage.setItem('easter_april1', 'true');
+              console.log('%c🎭 APRIL FOOLS EASTER EGG', 'color: #d49630; font-size: 16px; font-weight: bold;');
+            }
+          }
+        };
+
+        checkTimeEggs();
+        setInterval(checkTimeEggs, 60000);
+
+        // Console easter egg
+        console.log('%c🔐 GAME VAULT', 'color: #d49630; font-size: 24px; font-weight: 900; letter-spacing: 0.2em;');
+        console.log('%cWillkommen im Tresor. Sieben Spiele warten auf dich.', 'color: #a0a0a0; font-size: 14px;');
+        console.log('%cDrücke ↑↑↓↓←→←→BA für ein Easter Egg.', 'color: #d49630; font-size: 12px;');
+        console.log('%cBesuche /void, /admin, /konami für versteckte Routen.', 'color: #a0a0a0; font-size: 12px;');
+      })();
+    </script>
+  </body>
+</html>

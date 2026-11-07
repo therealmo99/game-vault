@@ -223,7 +223,6 @@
   .grid-pattern { background-image: linear-gradient(rgb(255 255 255 / 0.02) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.02) 1px, transparent 1px); background-size: 48px 48px; }
   .accent-line { position: relative; }
   .accent-line::before { content: ""; position: absolute; left: 0; bottom: -4px; width: 40px; height: 2px; background: var(--color-gold-500); }
-  .gold-gradient-text { background: linear-gradient(90deg, var(--color-gold-700), var(--color-gold-400), var(--color-gold-700)); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 4s ease-in-out infinite; }
   .gold-border-gradient { position: relative; }
   .gold-border-gradient::before { content: ""; position: absolute; inset: -1px; background: linear-gradient(90deg, var(--color-gold-700), var(--color-gold-400), var(--color-gold-700)); background-size: 200% 100%; border-radius: inherit; z-index: -1; animation: shimmer 4s ease-in-out infinite; opacity: 0; transition: opacity var(--transition-base); }
   .gold-border-gradient:hover::before { opacity: 1; }

@@ -183,12 +183,7 @@ export function ChronicleGame({ locale, onClose, gameId }: ChronicleGameProps) {
                       {index + 1}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3">
-                        <span className="text-brutal text-xs tracking-wider text-gold-500 font-mono whitespace-nowrap">
-                          {originalEvent?.year > 0 ? originalEvent.year : `${Math.abs(originalEvent?.year ?? 0)} v. Chr.`}
-                        </span>
-                        <h3 className="text-fg-primary font-medium truncate">{originalEvent?.title[locale]}</h3>
-                      </div>
+                      <h3 className="text-fg-primary font-medium truncate mb-1">{originalEvent?.title[locale]}</h3>
                       <p className="text-fg-muted text-sm truncate">{originalEvent?.description[locale]}</p>
                     </div>
                     {isSelected && <Check className="w-5 h-5 text-gold-500" aria-hidden="true" />}

@@ -16,6 +16,9 @@ export const ui = {
       subtitle: "Sieben Spiele. Ein Tresor. Unendlich viele Geheimnisse.",
       cta: "TRESOR ÖFFNEN",
       ctaAria: "Zum Spiele-Bereich scrollen",
+      featureGames: "7 SPIELE",
+      featureSecrets: "7 GEHEIMNISSE",
+      featureLocal: "LOKAL GESPEICHERT",
     },
     games: {
       title: "DIE SPIELE",
@@ -162,6 +165,9 @@ export const ui = {
       subtitle: "Seven Games. One Vault. Infinite Secrets.",
       cta: "OPEN VAULT",
       ctaAria: "Scroll to games section",
+      featureGames: "7 GAMES",
+      featureSecrets: "7 SECRETS",
+      featureLocal: "LOCAL STORAGE",
     },
     games: {
       title: "THE GAMES",

@@ -1,12 +1,12 @@
 import { useState, useCallback, useEffect, useMemo } from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 import { Card, CardBody, CardHeader, CardFooter } from "../ui/Card";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
 import { Input } from "../ui/Input";
-import { t, type Locale } from "../../../i18n";
-import type { GameId } from "../../../lib/gameState";
-import { useGameProgress, useSecrets } from "../../../hooks/useGameState";
+import { t, type Locale } from "../../i18n";
+import type { GameId } from "../../lib/gameState";
+import { useGameProgress, useSecrets } from "../../hooks/useGameState";
 import { X, Check, Key, Copy } from "lucide-react";
 
 const CIPHER_TEXTS = [

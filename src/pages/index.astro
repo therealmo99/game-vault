@@ -1,24 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Header } from '../components/Header.tsx';
-import { Hero } from '../components/Hero.tsx';
-import { GameGrid } from '../components/GameGrid.tsx';
-import { Progress } from '../components/Progress.tsx';
-import { Secrets } from '../components/Secrets.tsx';
-import { EasterEggs } from '../components/EasterEggs.tsx';
-import { Footer } from '../components/Footer.tsx';
+import { App } from '../components/App.tsx';
 ---
 
 <Layout title="GAME VAULT" description="Sieben Spiele. Ein Tresor. Unendlich viele Geheimnisse." locale="de">
-  <Header locale="de" onLocaleChange={() => {}} onScrollToGames={() => document.getElementById('games-section')?.scrollIntoView({ behavior: 'smooth' })} client:load />
-
-  <main id="main" class="pt-20">
-    <Hero locale="de" onScrollToGames={() => document.getElementById('games-section')?.scrollIntoView({ behavior: 'smooth' })} client:load />
-    <GameGrid locale="de" onPlay={(gameId) => { window.dispatchEvent(new CustomEvent('play-game', { detail: { gameId } })); }} client:load />
-    <Progress locale="de" client:load />
-    <Secrets locale="de" client:load />
-    <EasterEggs locale="de" client:load />
-  </main>
-
-  <Footer locale="de" client:load />
+  <App client:load />
 </Layout>

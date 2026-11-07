@@ -1,11 +1,11 @@
 import { useState, useCallback, useEffect, useRef } from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 import { Card, CardBody, CardHeader, CardFooter } from "../ui/Card";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
-import { t, type Locale } from "../../../i18n";
-import type { GameId } from "../../../lib/gameState";
-import { useGameProgress, useSecrets } from "../../../hooks/useGameState";
+import { t, type Locale } from "../../i18n";
+import type { GameId } from "../../lib/gameState";
+import { useGameProgress, useSecrets } from "../../hooks/useGameState";
 import { X, Volume2, VolumeX, Music, Check, RotateCcw } from "lucide-react";
 
 const TONE_FREQUENCIES = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25];

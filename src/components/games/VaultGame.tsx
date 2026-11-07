@@ -1,11 +1,11 @@
 import { useState, useCallback, useEffect } from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 import { Card, CardBody, CardHeader, CardFooter } from "../ui/Card";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
-import { t, type Locale } from "../../../i18n";
-import type { GameId } from "../../../lib/gameState";
-import { useGameProgress, useVaultState, useSecrets } from "../../../hooks/useGameState";
+import { t, type Locale } from "../../i18n";
+import type { GameId } from "../../lib/gameState";
+import { useGameProgress, useVaultState, useSecrets } from "../../hooks/useGameState";
 import { X, Key, Lock, Check, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 
 const VAULT_COMBINATIONS = [
